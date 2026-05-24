@@ -48,6 +48,8 @@ Suggested command flow:
 5. `cat notes.txt`
 6. `head -n 2 notes.txt`
 7. `tail -n 2 notes.txt`
+8. 'echo "disk space is $(df -h / | awk 'NR==2 {print $4}')"'
+
 
 ---
 
