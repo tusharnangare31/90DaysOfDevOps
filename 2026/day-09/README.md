@@ -54,7 +54,7 @@ Assign users:
 ---
 
 ### Task 4: Shared Directory (20 minutes)
-
+ 
 1. Create directory: `/opt/dev-project`
 2. Set group owner to `developers`
 3. Set permissions to `775` (rwxrwxr-x)
