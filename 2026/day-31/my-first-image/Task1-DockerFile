@@ -1,0 +1,5 @@
+From Ubuntu:latest 
+
+RUN apt update && apt install crul -y
+
+CMD [echo","Hello from my custom image!"]

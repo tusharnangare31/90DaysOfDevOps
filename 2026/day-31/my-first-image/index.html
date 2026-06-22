@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dockerfile Project - Day 31</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    width:100%;
+    text-align:center;
+}
+
+.tag{
+    display:inline-block;
+    background:#0ea5e9;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.highlight{
+    color:#38bdf8;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #334155;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.5;
+}
+
+.btn{
+    margin-top:40px;
+    display:inline-block;
+    padding:15px 30px;
+    background:#38bdf8;
+    color:#0f172a;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+.counter{
+    margin-top:30px;
+    font-size:1.1rem;
+    color:#94a3b8;
+}
+
+.footer{
+    margin-top:40px;
+    color:#64748b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="tag">
+🐳 Dockerfile Project • Day 31
+</div>
+
+<h1>
+Building My First <span class="highlight">Custom Docker Image</span>
+</h1>
+
+<p class="subtitle">
+This website is running inside an Nginx container built using a custom Dockerfile.
+Part of my #90DaysOfDevOps journey.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Dockerfile</h3>
+<p>Created a custom image using nginx:alpine and deployed a static website.</p>
+</div>
+
+<div class="card">
+<h3>Container</h3>
+<p>Built and launched the application inside a Docker container.</p>
+</div>
+
+<div class="card">
+<h3>Nginx</h3>
+<p>Serving static content through Nginx with containerized deployment.</p>
+</div>
+
+<div class="card">
+<h3>DevOps</h3>
+<p>Learning Docker, Containers, CI/CD, Kubernetes and Cloud technologies.</p>
+</div>
+
+</div>
+
+<a href="#" class="btn" onclick="showMessage()">
+View Deployment Status
+</a>
+
+<div class="counter">
+Visitors: <span id="count">0</span>
+</div>
+
+<div class="footer">
+Created by Tushar Nangare • Dockerfile Fundamentals • Day 31
+</div>
+
+</div>
+
+<script>
+let count = localStorage.getItem("visits") || 0;
+count++;
+localStorage.setItem("visits", count);
+document.getElementById("count").innerText = count;
+
+function showMessage(){
+    alert("🚀 Docker Container is Running Successfully!");
+}
+</script>
+
+</body>
+</html>
