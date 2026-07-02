@@ -1,0 +1,22 @@
+---
+server:
+    name: frontend
+    ip: 192.168.0.1
+    port: 5000
+
+database:
+    host: localhost
+    name: app_db
+    credentials:
+        user: admin
+        password: admin
+
+startup_script_literal: |
+    echo "Starting Server..."
+    sudo systemctl start nginx
+    echo "Done"
+
+startup_script_folded: >
+    echo "Starting Server..."
+    sudo systemctl start nginx
+    echo "Done"
